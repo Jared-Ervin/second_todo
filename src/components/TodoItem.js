@@ -18,9 +18,14 @@ export function TodoItem(props) {
   console.log(todo);
   return (
     <div>
-      <input placeholder="New Task" onChange={handleChange} value={todo.task} />
+      <input
+        className="newTodo"
+        placeholder="What do you want to do?"
+        onChange={handleChange}
+        value={todo.task}
+      />
       <span>
-        <button onClick={handleClick}>Create Task</button>
+        <button id="submitButton" type="submit" onClick={handleClick}>Create Task</button>
       </span>
     </div>
   );

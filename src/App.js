@@ -1,3 +1,7 @@
+// todo - implement delete
+// todo - implement edit modal
+// todo - implment drag and drop reodering?
+
 import React, { useState } from "react";
 import { TodoItem } from "./components/TodoItem";
 import { TodoList } from "./components/TodoList";
@@ -9,6 +13,7 @@ function App() {
     // takes a todo item from Todo.js and adds it to the todo list
     if (!todo) return;
     setTodoList([todo, ...todoList]);
+    console.log(todoList)
   };
 
   return (

@@ -1,55 +1,124 @@
 .App {
-  margin: auto;
-  width: 50%;
-  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
 
 h1 {
-    text-decoration: underline;
-    margin-bottom: 70px;
+  text-decoration: underline;
+  margin-bottom: 70px;
 }
 
 .top {
-
-  text-align: center;
-  align-items: center; 
-  margin-bottom: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: top;
+  flex-grow: 1;
+  margin-bottom: 50px;
 }
 
+.submission-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  /* width: 500px; */
+}
+
+.input-box {
+  width: 360px;
+  height: 50px;
+  border: 4px solid #000000;
+  border-radius: 50px;
+  font-size: large;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  margin-left: 100px;
+  /* flex: 4 4; */
+}
+
+.submit-button {
+  display: flex;
+  margin-left: 20px;
+  height: 45px;
+  width: 45px;
+  font-size: 15px;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  /* flex: .5 .5; */
+  line-height: 20px;
+}
+
+#new-task {
+  font-size: 50px;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  background-color: rgb(131, 187, 131);
+  color: white;
+  transition-duration: 0.4s;
+}
+
+#new-task:hover {
+  background-color: rgb(93, 170, 93); /* Green */
+  color: rgb(3, 109, 3);
+}
 
 ul {
-    padding-left: 30%;
-  }
-  
-.newTodo {
-    width: 300px;
-    height: 50px;
-    border: 4px solid #000000;
-    border-radius: 50px;  
-    font-size: large;
-    text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: left;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  margin-left: 100px;
 }
 
-#submitButton {
-    margin-left: 10px;
-    width: auto;
-    height: 50px;
-    font-size: large;
+.todo-item-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  align-items: flex-start;
+  text-align: left;
 }
 
-.todoItemWrapper {
-    text-align: center;
+#delete-button {
+  align-self: center;
+  justify-self: center;
+  background-color: rgba(255, 0, 0, 0.596);
+  border: 2px solid rgb(90, 3, 3);
+  color: white;
+  font-size: 15px;
+  font-weight: 900;
+  transition-duration: 0.4s;
+  margin-left: 20px;
 }
 
-.todoItem {
-  margin-top: 10px;
-  padding: 20px;
-  width: 50%;
+#delete-button:hover {
+  background-color: rgb(93, 170, 93);
+  color: rgb(3, 109, 3);
+}
+
+.todo-item {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  width: 360px;
+  padding: 10px;
   border: 2px solid rgb(0, 0, 0);
   background-color: blanchedalmond;
-  text-align: left;
-  border-radius: 50px; 
+  border-radius: 50px;
+  flex: 1 1;
 }
 
+.task {
+  font-size: 20px;
+}
 
-
+.time {
+  font-size: 12px;
+  color: grey;
+}

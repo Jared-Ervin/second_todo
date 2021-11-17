@@ -6,22 +6,25 @@ export function TodoList(props) {
     return props.todoList.map((element, index) => {
       const { task, time } = element;
       return (
-        <div className="todoItemWrapper" key={index}>
-          <div className="todoItem">
-            <button
-              style={{ marginRight: 20 }}
-              onClick={() => props.handleDelete(index)}
-            >
-              X
-            </button>
-            <li style={{ display: "inline" }}>
-              <b>
-                {" "}
-                Task {index + 1}: {task}{" "}
-              </b>{" "}
-              - {time}
+        <div className="todo-item-wrapper" key={index}>
+
+          <div className="todo-item">
+            <li>
+              <div className="task">
+                {task}{" "}
+              </div>
+              <div className="time">Created at: {time} </div>
+              
             </li>
+            
           </div>
+          <button
+            id="delete-button"
+            style={{ marginRight: 20 }}
+            onClick={() => props.handleDelete(index)}
+          >
+            &#10004;
+          </button>
         </div>
       );
     });

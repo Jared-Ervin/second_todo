@@ -17,16 +17,16 @@ export function TodoItem(props) {
 
   console.log(todo);
   return (
-    <div>
+    <div className="submission-wrapper">
       <input
-        className="newTodo"
+        className="input-box"
         placeholder="What do you want to do?"
         onChange={handleChange}
         value={todo.task}
       />
-      <span>
-        <button id="submitButton" type="submit" onClick={handleClick}>Create Task</button>
-      </span>
+      <button className="submit-button" id="new-task" type="submit" onClick={handleClick}>
+        +
+      </button>
     </div>
   );
 }

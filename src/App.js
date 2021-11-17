@@ -10,7 +10,7 @@ function App() {
 
   const todoSubmit = (todo) => {
     // takes a todo item from Todo.js and adds it to the todo list
-    if (!todo) return;
+    if (!todo.task) return;
     setTodoList([...todoList, todo]);
     console.log(todoList);
   };
@@ -23,13 +23,17 @@ function App() {
     );
   };
 
+  // handleEdit = (todoIndex) => {
+
+  // }
+
   return (
     <div className="App">
       <div className="top">
       <h1>Second React Todolist</h1>
       <TodoItem todoSubmit={todoSubmit} />
       </div>
-      <TodoList todoList={todoList} handleDelete={handleDelete} />
+      <TodoList todoList={todoList} handleDelete={handleDelete} handleEdit={null}/>
     </div>
   );
 }
